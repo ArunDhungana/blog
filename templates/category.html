@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block title_block %}Category Page {% endblock %}
+
+{%block content_block%}
+{% for each in technology %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="./media/blogpost_images/{{each.image}}" class="card-img-top" alt="{{each.image }}">
+        <div class="card-body">
+        <h5 class="card-title">{{each.title}}</h5>
+        <p class="card-text">{{each.description}}</p>
+        <a href="/" class="btn btn-primary">View more</a>
+        </div>
+    </div>
+{% endfor %}
+
+{%endblock%} 
